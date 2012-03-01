@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gettingrail</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<div class="container">
+		<header>
+			<%= image_tag("logo.png", alt: "Getting Real") %>
+			
+			<nav class="round">
+				<ul>
+				<li><%= link_to "home", root_path %></li>
+				<li><%= link_to "portfolio", portfolio_path %></li>
+				<li><%= link_to "blog", blog_path %></li>
+				<li><%= link_to "contact us", contact_path%></li>
+				</ul>
+			</nav>
+			
+		</header>
+		<div class="quote2">
+		<h2>&lsquo;We build great web and mobile applications to turn your idea into reality.&rsquo;</h2>
+		
+		</div>
+		
+		
+		
+		</div>
+		<%= image_tag("dashedline.png", alt:"", class:"dashed_line")%>
 <%= yield %>
+
+	
 
 </body>
 </html>
